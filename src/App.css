@@ -1,0 +1,340 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation styles */
+.animate-section,
+.animate-header,
+.animate-main {
+  /* Remove opacity: 0 from here */
+}
+
+/* Optional: Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add some transition styles */
+.animate-section,
+.animate-header,
+.animate-main {
+  will-change: transform, opacity;
+}
+
+/* Background Styles */
+.bg-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(circle at center,
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(37, 99, 235, 0.1) 25%,
+    rgba(15, 23, 42, 0) 100%
+  );
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Enhance content sections */
+.animate-section {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.animate-section:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Add a subtle glow effect */
+.glow {
+  position: relative;
+}
+
+.glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.1),
+    rgba(37, 99, 235, 0.1)
+  );
+  filter: blur(15px);
+  z-index: -1;
+}
+
+/* Optional: Add custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 130, 246, 0.3),
+    rgba(37, 99, 235, 0.3)
+  );
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 130, 246, 0.4),
+    rgba(37, 99, 235, 0.4)
+  );
+}
+
+/* Add these new styles */
+.perspective {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.section-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.section-3d:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+}
+
+/* Optional: Add smooth transition for all transforms */
+* {
+  transition: transform 0.3s ease;
+}
+
+/* Page load overlay */
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #0f172a, #1e293b);
+  z-index: 1000;
+  transform-origin: top;
+}
+
+/* Clip path animation */
+.clip-path {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Enhanced 3D section styles */
+.section-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.section-3d:hover {
+  transform: translateY(-10px) scale(1.02) rotateX(5deg);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 
+    0 20px 40px -20px rgba(0, 0, 0, 0.6),
+    inset 0 0 30px rgba(255, 255, 255, 0.07);
+}
+
+/* Stagger animation base styles */
+.stagger-animate {
+  opacity: 0;
+  transform: translateY(50px) rotateX(-30deg);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced gradient background */
+.bg-gradient {
+  background: linear-gradient(135deg, 
+    #0f172a 0%, 
+    #1e293b 50%,
+    #0f172a 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.3),
+    rgba(37, 99, 235, 0.3)
+  );
+  border-radius: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth scrolling container */
+.smooth-wrapper {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.smooth-content {
+  will-change: transform;
+}
+
+/* Update section styles for smoother transitions */
+.section-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transform: translateZ(0);
+}
+
+.section-3d:hover {
+  transform: translateY(-10px) scale(1.02) rotateX(5deg) translateZ(0);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 
+    0 20px 40px -20px rgba(0, 0, 0, 0.6),
+    inset 0 0 30px rgba(255, 255, 255, 0.07);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smoother stagger animations */
+.stagger-animate {
+  opacity: 0;
+  transform: translateY(50px) rotateX(-15deg) translateZ(0);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+/* Smoother gradient animation */
+.bg-gradient {
+  background: linear-gradient(135deg, 
+    #0f172a 0%, 
+    #1e293b 50%,
+    #0f172a 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
+}
+
+/* Add this to your existing CSS */
+.smooth-scroll {
+  transition: transform 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.perspective {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Update the section-3d styles */
+.section-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 
+    0 10px 30px -10px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transform: translateZ(0);
+}
+
+.section-3d:hover {
+  transform: translateY(-10px) scale(1.02) rotateX(5deg) translateZ(0);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 
+    0 20px 40px -20px rgba(0, 0, 0, 0.6),
+    inset 0 0 30px rgba(255, 255, 255, 0.07);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,9 @@
+step 1 = splite 
+
+step 2 = cd server
+
+step 3 = nodemon index.js
+
+step 4 = npm start
+
+close :- ctrl c
